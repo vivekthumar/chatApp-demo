@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ./parts/head.ejs %>
+</head>
+
+<body>
+  <% include ./parts/header.ejs %>
+    <main>
+      <div class="container-fluid">
+        <input type="hidden" id="user" value="<%= user.username %>" />
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h2>Chat Options</h2>
+              </div>
+
+              <div class="panel-body" id="scrl1">
+                <ul id="list"></ul>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="panel panel-primary" style="min-height:528px">
+              <div class="panel-heading">
+                <h4 id="frndName">Chat Room</h4>
+              </div>
+              <div class="panel-body" id="scrl2">
+                <p id="loading">Loading......</p>
+                <p id="noChat">No More Chats To Display.....</p>
+                <p id="initMsg">!!...Click On User To Start Chat...!!</p>
+                <ul id="messages"></ul>
+              </div>
+              <div class="panel-footer" style="margin-top: 45px;">
+                <form id="chatForm" action="">
+                  <input id="myMsg" class="input-box-send" autocomplete="off" placeholder="Write Message Here.." />
+                  <button id="sendBtn" class="btn btn-success btn-lg">
+                    <span class="glyphicon glyphicon-send"></span>
+                    <b>Send</b>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <% include ./parts/footer.ejs %>
+
+      <script src="/js/scriptForChat.js"></script>
+</body>
+
+</html>

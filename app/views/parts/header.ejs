@@ -1,0 +1,16 @@
+<header>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      
+    <ul class="nav navbar-nav navbar-right">
+        <% if(user){ %>
+          <li  class="boxF"><a href="#">Hello, <%= user.username %></a></li>
+          <li  class="boxF"><a href="/user/logout">Logout</a></li>
+        <% } else{ %>
+          <li class="boxF"><a href="/user/login">Login</a></li>
+          <li class="boxF"><a href="/user/signup">Signup</a></li>
+        <% } %>
+      </ul>
+    </div>
+  </nav>
+</header>
